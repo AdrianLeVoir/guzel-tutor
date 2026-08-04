@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гузель — Репетитор по истории | Подготовка к ЕГЭ и ОГЭ</title>
     <meta name="description" content="Репетитор по истории Гузель. Подготовка к ЕГЭ и ОГЭ. Средний балл учеников — 82. Бесплатное пробное занятие.">
+    <meta name="keywords" content="репетитор история, подготовка к ЕГЭ история, ОГЭ история, репетитор Казань, ЕГЭ 90+">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Гузель — Репетитор по истории | Подготовка к ЕГЭ и ОГЭ">
+    <meta property="og:description" content="Средний балл учеников — 82. Бесплатное пробное занятие. Индивидуальная подготовка к ЕГЭ и ОГЭ по истории.">
+    <meta property="og:url" content="https://guzel-tutor.levoirlab.su/">
+    <meta property="og:image" content="https://guzel-tutor.levoirlab.su/about-photo.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Гузель — Репетитор по истории">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Гузель — Репетитор по истории">
+    <meta name="twitter:description" content="Средний балл учеников — 82. Бесплатное пробное занятие.">
+    <meta name="twitter:image" content="https://guzel-tutor.levoirlab.su/about-photo.jpg">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -28,700 +46,206 @@
             --shadow-hover: 0 12px 32px rgba(61, 43, 31, 0.15);
             --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
         body {
             font-family: var(--font-body);
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        /* ===== BUTTONS ===== */
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-family: var(--font-body);
-            font-size: 15px;
-            font-weight: 500;
-            cursor: pointer;
-            border: none;
-            transition: var(--transition);
-            white-space: nowrap;
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 14px 28px; border-radius: 50px;
+            font-family: var(--font-body); font-size: 15px; font-weight: 500;
+            cursor: pointer; border: none; transition: var(--transition); white-space: nowrap;
         }
-        .btn--dark {
-            background: var(--accent-dark);
-            color: var(--white);
-        }
-        .btn--dark:hover {
-            background: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(61, 43, 31, 0.25);
-        }
-        .btn--large {
-            padding: 18px 36px;
-            font-size: 16px;
-        }
-        .btn--accent {
-            background: #C97B3A;
-            color: var(--white);
-        }
-        .btn--accent:hover {
-            background: #B5692E;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(201, 123, 58, 0.3);
-        }
-        /* ===== HEADER ===== */
+        .btn--dark { background: var(--accent-dark); color: var(--white); }
+        .btn--dark:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(61, 43, 31, 0.25); }
+        .btn--large { padding: 18px 36px; font-size: 16px; }
+        .btn--accent { background: #C97B3A; color: var(--white); }
+        .btn--accent:hover { background: #B5692E; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201, 123, 58, 0.3); }
         .header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: var(--bg);
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(245, 240, 232, 0.92);
             border-bottom: 1px solid var(--border);
-            padding: 18px 0;
-            backdrop-filter: blur(10px);
+            padding: 18px 0; backdrop-filter: blur(12px);
         }
-        .header__inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-        }
-        .header__logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-shrink: 0;
-        }
-        .header__logo-icon {
-            flex-shrink: 0;
-        }
-        .header__name {
-            display: block;
-            font-family: var(--font-heading);
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text);
-            line-height: 1.2;
-        }
-        .header__role {
-            display: block;
-            font-size: 12px;
-            color: var(--text-light);
-            font-weight: 400;
-        }
-        .header__nav {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
-        .header__nav a {
-            font-size: 14px;
-            font-weight: 400;
-            color: var(--text);
-            position: relative;
-            padding: 4px 0;
-        }
-        .header__nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 1.5px;
-            background: var(--accent);
-            transition: var(--transition);
-        }
-        .header__nav a:hover::after {
-            width: 100%;
-        }
-        .header__burger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 4px;
-            z-index: 101;
-        }
-        .header__burger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--text);
-            transition: var(--transition);
-            transform-origin: center;
-        }
-        .header__burger.active span:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
-        }
-        .header__burger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .header__burger.active span:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
-        }
-        /* ===== HERO ===== */
-        .hero {
-            padding: 60px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero__inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .hero__content {
-            position: relative;
-            z-index: 2;
-        }
+        .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+        .header__logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+        .header__name { display: block; font-family: var(--font-heading); font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.2; }
+        .header__role { display: block; font-size: 12px; color: var(--text-light); }
+        .header__nav { display: flex; align-items: center; gap: 28px; }
+        .header__nav a { font-size: 14px; color: var(--text); position: relative; padding: 4px 0; }
+        .header__nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1.5px; background: var(--accent); transition: var(--transition); }
+        .header__nav a:hover::after { width: 100%; }
+        .header__burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 101; }
+        .header__burger span { display: block; width: 24px; height: 2px; background: var(--text); transition: var(--transition); transform-origin: center; }
+        .header__burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .header__burger.active span:nth-child(2) { opacity: 0; }
+        .header__burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .hero { padding: 60px 0 80px; position: relative; overflow: hidden; }
+        .hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero__content { position: relative; z-index: 2; }
         .hero__badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(201, 123, 58, 0.12);
-            color: #C97B3A;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            border: 1px solid rgba(201, 123, 58, 0.2);
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(201, 123, 58, 0.12); color: #C97B3A;
+            padding: 8px 16px; border-radius: 50px; font-size: 13px; font-weight: 600;
+            margin-bottom: 24px; border: 1px solid rgba(201, 123, 58, 0.2);
         }
         .hero__title {
-            font-family: var(--font-heading);
-            font-size: clamp(40px, 5vw, 64px);
-            font-weight: 400;
-            line-height: 1.1;
-            color: var(--text);
-            margin-bottom: 24px;
-            letter-spacing: -0.02em;
+            font-family: var(--font-heading); font-size: clamp(36px, 4.8vw, 56px);
+            font-weight: 400; line-height: 1.15; color: var(--text);
+            margin-bottom: 24px; letter-spacing: -0.02em;
         }
-        .hero__title strong {
-            font-weight: 700;
-            color: #C97B3A;
+        .hero__title strong { font-weight: 700; color: #C97B3A; }
+        .hero__subtitle { font-size: 17px; line-height: 1.7; color: var(--text-light); margin-bottom: 32px; max-width: 520px; }
+        .hero__stats { display: flex; gap: 32px; margin-bottom: 32px; flex-wrap: wrap; }
+        .hero__stat { display: flex; flex-direction: column; }
+        .hero__stat-value { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--text); line-height: 1; }
+        .hero__stat-label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+        .hero__socials { display: flex; gap: 24px; margin-top: 28px; flex-wrap: wrap; }
+        .hero__social-link { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-light); font-weight: 500; }
+        .hero__social-link:hover { color: var(--accent); transform: translateX(2px); }
+        .hero__painting { border-radius: 240px 240px 120px 120px; overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4/3; }
+        .hero__painting img { width: 100%; height: 100%; object-fit: cover; }
+        .hero__decor-left { position: absolute; left: -30px; bottom: 60px; opacity: 0.15; pointer-events: none; z-index: 1; }
+        .section-title { font-family: var(--font-heading); font-size: clamp(30px, 3.8vw, 44px); font-weight: 400; color: var(--text); margin-bottom: 40px; letter-spacing: -0.01em; }
+        .section-title--center { text-align: center; }
+        .about { padding: 100px 0 60px; background: var(--bg-light); }
+        .about__inner { display: grid; grid-template-columns: 1fr 1.3fr; gap: 70px; align-items: start; }
+        .about__photo { border-radius: var(--radius); width: 100%; aspect-ratio: 4/5; object-fit: cover; box-shadow: var(--shadow); }
+        .about__intro { font-size: 18px; line-height: 1.7; margin-bottom: 36px; color: var(--text); }
+        .about__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+        .about__stat { display: flex; align-items: flex-start; gap: 14px; }
+        .about__stat-icon { flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
+        .about__stat-value { display: block; font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.4; }
+        .about__stat-label { display: block; font-size: 13px; color: var(--text-light); margin-top: 3px; }
+        .services { padding: 100px 0; }
+        .services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .service-card { background: var(--bg-card); border-radius: var(--radius); padding: 36px 28px; transition: var(--transition); border: 1px solid transparent; }
+        .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: var(--border); }
+        .service-card__icon { margin-bottom: 18px; display: flex; justify-content: center; width: 56px; height: 56px; background: var(--bg-light); border-radius: 50%; align-items: center; }
+        .service-card h3 { font-family: var(--font-heading); font-size: 20px; font-weight: 600; margin-bottom: 12px; line-height: 1.3; color: var(--text); }
+        .service-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+        .results { padding: 100px 0; background: var(--bg-cta); border-radius: var(--radius-lg); margin: 0 24px; }
+        .results__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .results__card { background: var(--bg-light); border-radius: var(--radius); padding: 36px 28px; text-align: center; border: 1px solid var(--border); transition: var(--transition); }
+        .results__card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+        .results__label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 12px; color: var(--text-light); line-height: 1.4; }
+        .results__value { display: block; font-family: var(--font-heading); font-size: 48px; font-weight: 700; color: #C97B3A; line-height: 1; }
+        .pricing { padding: 100px 0; }
+        .pricing__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
+        .price-card { background: var(--bg-card); border-radius: var(--radius); padding: 40px 28px; text-align: center; border: 1px solid transparent; transition: var(--transition); position: relative; }
+        .price-card--featured { background: var(--white); border-color: #C97B3A; box-shadow: var(--shadow-hover); transform: scale(1.03); }
+        .price-card--featured::before { content: 'Популярный'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #C97B3A; color: white; font-size: 12px; font-weight: 600; padding: 4px 14px; border-radius: 50px; }
+        .price-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+        .price-card--featured:hover { transform: scale(1.03) translateY(-4px); }
+        .price-card__name { font-family: var(--font-heading); font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+        .price-card__price { font-family: var(--font-heading); font-size: 40px; font-weight: 700; color: #C97B3A; line-height: 1.1; margin: 16px 0 8px; }
+        .price-card__period { font-size: 14px; color: var(--text-light); margin-bottom: 24px; }
+        .price-card__list { list-style: none; text-align: left; margin-bottom: 28px; font-size: 14px; color: var(--text-light); }
+        .price-card__list li { padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 10px; }
+        .price-card__list li:last-child { border-bottom: none; }
+        .price-card__list li::before { content: '✓'; color: #C97B3A; font-weight: 700; flex-shrink: 0; }
+        .features { padding: 100px 0; background: var(--bg-light); }
+        .features__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .feature-card { display: flex; gap: 20px; align-items: flex-start; }
+        .feature-card__icon { flex-shrink: 0; width: 48px; height: 48px; background: var(--bg-card); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+        .feature-card h3 { font-family: var(--font-heading); font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+        .feature-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+        .format { padding: 100px 0; }
+        .format__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; }
+        .format__item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; }
+        .format__item-icon { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background: var(--bg-card); border-radius: 50%; }
+        .format__item p { font-size: 14px; line-height: 1.6; color: var(--text-light); }
+        .faq { padding: 100px 0; background: var(--bg-light); }
+        .faq__list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+        .faq__item { background: var(--bg-card); border-radius: var(--radius); border: 1px solid transparent; overflow: hidden; transition: var(--transition); }
+        .faq__item.active { border-color: var(--border); box-shadow: var(--shadow); }
+        .faq__question {
+            width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+            padding: 20px 24px; background: none; border: none; cursor: pointer;
+            font-family: var(--font-body); font-size: 16px; font-weight: 500; color: var(--text); text-align: left;
         }
-        .hero__subtitle {
-            font-size: 17px;
-            line-height: 1.7;
-            color: var(--text-light);
-            margin-bottom: 32px;
-            max-width: 520px;
-        }
-        .hero__stats {
-            display: flex;
-            gap: 32px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-        .hero__stat {
-            display: flex;
-            flex-direction: column;
-        }
-        .hero__stat-value {
-            font-family: var(--font-heading);
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--text);
-            line-height: 1;
-        }
-        .hero__stat-label {
-            font-size: 13px;
-            color: var(--text-light);
-            margin-top: 4px;
-        }
-        .hero__socials {
-            display: flex;
-            gap: 24px;
-            margin-top: 28px;
-            flex-wrap: wrap;
-        }
-        .hero__social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: var(--text-light);
-            font-weight: 500;
-        }
-        .hero__social-link:hover {
-            color: var(--accent);
-            transform: translateX(2px);
-        }
-        .hero__image {
-            position: relative;
-        }
-        .hero__painting {
-            border-radius: 240px 240px 120px 120px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            aspect-ratio: 4/3;
-            position: relative;
-        }
-        .hero__painting img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .hero__decor-left {
-            position: absolute;
-            left: -30px;
-            bottom: 60px;
-            opacity: 0.15;
-            pointer-events: none;
-            z-index: 1;
-        }
-        /* ===== SECTION TITLE ===== */
-        .section-title {
-            font-family: var(--font-heading);
-            font-size: clamp(30px, 3.8vw, 44px);
-            font-weight: 400;
-            color: var(--text);
-            margin-bottom: 40px;
-            letter-spacing: -0.01em;
-        }
-        .section-title--center {
-            text-align: center;
-        }
-        /* ===== ABOUT ===== */
-        .about {
-            padding: 100px 0 60px;
-            background: var(--bg-light);
-        }
-        .about__inner {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 70px;
-            align-items: start;
-        }
-        .about__photo-wrap {
-            position: relative;
-        }
-        .about__photo {
-            border-radius: var(--radius);
-            width: 100%;
-            aspect-ratio: 4/5;
-            object-fit: cover;
-            box-shadow: var(--shadow);
-        }
-        .about__intro {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 36px;
-            color: var(--text);
-        }
-        .about__stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 28px;
-        }
-        .about__stat {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-        }
-        .about__stat-icon {
-            flex-shrink: 0;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .about__stat-value {
-            display: block;
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text);
-            line-height: 1.4;
-        }
-        .about__stat-label {
-            display: block;
-            font-size: 13px;
-            color: var(--text-light);
-            margin-top: 3px;
-        }
-        .about__quote-section {
-            padding: 60px 0 0;
-        }
-        .about__quote {
-            position: relative;
-            padding-left: 50px;
-            font-family: var(--font-heading);
-            font-size: 19px;
-            font-style: italic;
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-        .about__quote-mark {
-            position: absolute;
-            left: 0;
-            top: -15px;
-            font-size: 60px;
-            font-family: var(--font-heading);
-            color: var(--border);
-            line-height: 1;
-        }
-        /* ===== SERVICES ===== */
-        .services {
-            padding: 100px 0;
-        }
-        .services__grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .service-card {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 36px 28px;
-            transition: var(--transition);
-            border: 1px solid transparent;
-        }
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--border);
-        }
-        .service-card__icon {
-            margin-bottom: 18px;
-            display: flex;
-            justify-content: center;
-            width: 56px;
-            height: 56px;
-            background: var(--bg-light);
-            border-radius: 50%;
-            align-items: center;
-        }
-        .service-card h3 {
-            font-family: var(--font-heading);
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            line-height: 1.3;
-            color: var(--text);
-        }
-        .service-card p {
-            font-size: 14px;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-        /* ===== RESULTS ===== */
-        .results {
-            padding: 100px 0;
-            background: var(--bg-cta);
-            border-radius: var(--radius-lg);
-            margin: 0 24px;
-        }
-        .results__grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-        .results__card {
-            background: var(--bg-light);
-            border-radius: var(--radius);
-            padding: 36px 28px;
-            text-align: center;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-        .results__card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow);
-        }
-        .results__label {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 12px;
-            color: var(--text-light);
-            line-height: 1.4;
-        }
-        .results__value {
-            display: block;
-            font-family: var(--font-heading);
-            font-size: 48px;
-            font-weight: 700;
-            color: #C97B3A;
-            line-height: 1;
-        }
-        .results__value--dark {
-            color: var(--text);
-        }
-        /* ===== FEATURES ===== */
-        .features {
-            padding: 100px 0;
-        }
-        .features__grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-        .feature-card {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-        }
-        .feature-card__icon {
-            flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-            background: var(--bg-card);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .feature-card h3 {
-            font-family: var(--font-heading);
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-        .feature-card p {
-            font-size: 14px;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-        /* ===== FORMAT ===== */
-        .format {
-            padding: 100px 0;
-            background: var(--bg-light);
-        }
-        .format__grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 36px;
-        }
-        .format__item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 18px;
-        }
-        .format__item-icon {
-            width: 56px;
-            height: 56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-card);
-            border-radius: 50%;
-        }
-        .format__item p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-light);
-        }
-        /* ===== CTA ===== */
+        .faq__question:hover { color: var(--accent); }
+        .faq__icon { flex-shrink: 0; width: 24px; height: 24px; position: relative; }
+        .faq__icon::before, .faq__icon::after { content: ''; position: absolute; background: var(--accent); transition: var(--transition); }
+        .faq__icon::before { width: 14px; height: 2px; top: 11px; left: 5px; }
+        .faq__icon::after { width: 2px; height: 14px; top: 5px; left: 11px; }
+        .faq__item.active .faq__icon::after { transform: scaleY(0); }
+        .faq__answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+        .faq__answer-inner { padding: 0 24px 20px; font-size: 15px; color: var(--text-light); line-height: 1.7; }
         .cta {
             padding: 100px 0;
             background: linear-gradient(135deg, #C97B3A 0%, #A8622A 100%);
-            color: var(--white);
-            border-radius: var(--radius-lg);
-            margin: 0 24px 60px;
-            position: relative;
-            overflow: hidden;
+            color: var(--white); border-radius: var(--radius-lg);
+            margin: 0 24px 60px; position: relative; overflow: hidden;
         }
         .cta::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px;
             background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
             border-radius: 50%;
         }
-        .cta__inner {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto;
+        .cta__inner { position: relative; z-index: 2; text-align: center; max-width: 640px; margin: 0 auto; }
+        .cta__title { font-family: var(--font-heading); font-size: clamp(28px, 3.5vw, 40px); font-weight: 600; margin-bottom: 16px; line-height: 1.3; color: var(--white); }
+        .cta__text { font-size: 17px; color: rgba(255, 255, 255, 0.9); margin-bottom: 32px; line-height: 1.6; }
+        .cta__form-wrap {
+            background: var(--white); border-radius: var(--radius); padding: 8px;
+            max-width: 520px; margin: 0 auto; min-height: 420px;
+            display: flex; align-items: center; justify-content: center;
         }
-        .cta__title {
-            font-family: var(--font-heading);
-            font-size: clamp(28px, 3.5vw, 40px);
-            font-weight: 600;
-            margin-bottom: 20px;
-            line-height: 1.3;
-            color: var(--white);
-        }
-        .cta__text {
-            font-size: 17px;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 36px;
-            line-height: 1.6;
-        }
-        .cta .btn--dark {
-            background: var(--white);
-            color: var(--accent-dark);
-        }
-        .cta .btn--dark:hover {
-            background: var(--bg-light);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-        /* ===== FOOTER ===== */
-        .footer {
-            padding: 36px 0;
-            text-align: center;
-            font-size: 13px;
-            color: var(--text-light);
-            border-top: 1px solid var(--border);
-        }
-        /* ===== MOBILE NAV ===== */
+        .cta__form-placeholder { color: var(--text-light); font-size: 15px; text-align: center; padding: 40px 24px; line-height: 1.6; }
+        .cta__form-placeholder strong { display: block; color: var(--text); font-size: 16px; margin-bottom: 8px; }
+        .footer { padding: 36px 0; text-align: center; font-size: 13px; color: var(--text-light); border-top: 1px solid var(--border); }
         .mobile-nav {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--bg);
-            z-index: 99;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 32px;
-            opacity: 0;
-            pointer-events: none;
-            transition: var(--transition);
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--bg); z-index: 99; flex-direction: column;
+            align-items: center; justify-content: center; gap: 32px;
+            opacity: 0; pointer-events: none; transition: var(--transition);
         }
-        .mobile-nav.active {
-            display: flex;
-            opacity: 1;
-            pointer-events: all;
-        }
-        .mobile-nav a {
-            font-family: var(--font-heading);
-            font-size: 26px;
-            color: var(--text);
-        }
-        .mobile-nav a:hover {
-            color: var(--accent);
-        }
-        /* ===== ANIMATIONS ===== */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* ===== RESPONSIVE ===== */
+        .mobile-nav.active { display: flex; opacity: 1; pointer-events: all; }
+        .mobile-nav a { font-family: var(--font-heading); font-size: 26px; color: var(--text); }
+        .mobile-nav a:hover { color: var(--accent); }
+        .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
         @media (max-width: 1024px) {
-            .services__grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .features__grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .format__grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 28px;
-            }
-            .results__grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .services__grid, .pricing__grid, .features__grid { grid-template-columns: repeat(2, 1fr); }
+            .format__grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+            .results__grid { grid-template-columns: repeat(2, 1fr); }
+            .price-card--featured { transform: none; }
+            .price-card--featured:hover { transform: translateY(-4px); }
         }
         @media (max-width: 900px) {
-            .header__nav,
-            .header .btn {
-                display: none;
-            }
-            .header__burger {
-                display: flex;
-            }
-            .hero__inner {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .hero__painting {
-                border-radius: var(--radius-lg);
-                max-width: 500px;
-                margin: 0 auto;
-            }
-            .about__inner {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .about__photo {
-                max-width: 360px;
-                margin: 0 auto;
-            }
-            .about__stats {
-                grid-template-columns: 1fr;
-            }
+            .header__nav, .header .btn { display: none; }
+            .header__burger { display: flex; }
+            .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+            .hero__painting { border-radius: var(--radius-lg); max-width: 500px; margin: 0 auto; }
+            .about__inner { grid-template-columns: 1fr; gap: 40px; }
+            .about__photo { max-width: 360px; margin: 0 auto; }
+            .about__stats { grid-template-columns: 1fr; }
         }
         @media (max-width: 700px) {
-            .services__grid {
-                grid-template-columns: 1fr;
-            }
-            .features__grid {
-                grid-template-columns: 1fr;
-            }
-            .hero__stats {
-                gap: 20px;
-            }
-            .hero__stat-value {
-                font-size: 28px;
-            }
+            .services__grid, .pricing__grid, .features__grid { grid-template-columns: 1fr; }
+            .hero__stats { gap: 20px; }
+            .hero__stat-value { font-size: 28px; }
         }
         @media (max-width: 500px) {
-            .format__grid {
-                grid-template-columns: 1fr;
-            }
-            .results__grid {
-                grid-template-columns: 1fr;
-            }
-            .hero__socials {
-                flex-direction: column;
-                gap: 14px;
-            }
-            .btn--large {
-                width: 100%;
-                justify-content: center;
-            }
+            .format__grid { grid-template-columns: 1fr; }
+            .results__grid { grid-template-columns: 1fr; }
+            .hero__socials { flex-direction: column; gap: 14px; }
+            .btn--large { width: 100%; justify-content: center; }
+            .results { margin: 0 12px; }
+            .cta { margin: 0 12px 40px; }
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
     <header class="header">
         <div class="container header__inner">
             <a href="#" class="header__logo">
@@ -739,26 +263,24 @@
             <nav class="header__nav">
                 <a href="#about">Обо мне</a>
                 <a href="#services">Услуги</a>
-                <a href="#results">Результаты</a>
-                <a href="#features">Преимущества</a>
-                <a href="#contacts">Контакты</a>
+                <a href="#pricing">Цены</a>
+                <a href="#faq">Вопросы</a>
+                <a href="#contacts">Запись</a>
             </nav>
             <a href="#contacts" class="btn btn--dark">Бесплатное занятие</a>
-            <button class="header__burger" aria-label="Меню">
-                <span></span><span></span><span></span>
-            </button>
+            <button class="header__burger" aria-label="Меню"><span></span><span></span><span></span></button>
         </div>
     </header>
-    <!-- MOBILE NAV -->
+
     <div class="mobile-nav" id="mobileNav">
         <a href="#about">Обо мне</a>
         <a href="#services">Услуги</a>
-        <a href="#results">Результаты</a>
-        <a href="#features">Преимущества</a>
-        <a href="#contacts">Контакты</a>
+        <a href="#pricing">Цены</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contacts">Запись</a>
         <a href="#contacts" class="btn btn--dark btn--large">Бесплатное занятие</a>
     </div>
-    <!-- HERO -->
+
     <section class="hero">
         <svg class="hero__decor-left" width="120" height="220" viewBox="0 0 120 220" fill="none">
             <path d="M60 10C60 10 80 50 80 110C80 170 60 210 60 210" stroke="#5C4033" stroke-width="3"/>
@@ -768,14 +290,12 @@
         </svg>
         <div class="container hero__inner">
             <div class="hero__content fade-in">
-                <div class="hero__badge">
-                    🔥 Средний балл учеников — 82 за ЕГЭ
-                </div>
+                <div class="hero__badge">🔥 Средний балл учеников — 82 за ЕГЭ</div>
                 <h1 class="hero__title">
-                    Хотите сдать ЕГЭ по истории на <strong>90+</strong> и поступить в ВУЗ мечты на бюджет?
+                    Хотите сдать ЕГЭ по истории на <strong>90+</strong> и поступить в вуз мечты на бюджет?
                 </h1>
                 <p class="hero__subtitle">
-                    Вы обратились по адресу. Меня зовут Гузель, я готовлю к ЕГЭ и ОГЭ по истории уже два года. Гарантирую успешную сдачу экзамена.
+                    Меня зовут Гузель. Готовлю к ЕГЭ и ОГЭ по истории уже два года. Помогаю разобраться в сложных темах, выстроить систему и уверенно подойти к экзамену.
                 </p>
                 <div class="hero__stats">
                     <div class="hero__stat">
@@ -791,288 +311,271 @@
                         <span class="hero__stat-label">учеников сдали на 90+</span>
                     </div>
                 </div>
-                <a href="#contacts" class="btn btn--accent btn--large">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2"/>
-                        <path d="M16 2v4M8 2v4M3 10h18"/>
-                        <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/>
-                    </svg>
-                    Записаться на бесплатное занятие
-                </a>
+                <a href="#contacts" class="btn btn--accent btn--large">Записаться на бесплатное занятие</a>
                 <div class="hero__socials">
                     <a href="https://t.me/" class="hero__social-link" target="_blank" rel="noopener">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-                        </svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
                         Telegram
                     </a>
                     <a href="https://vk.com/" class="hero__social-link" target="_blank" rel="noopener">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12.785 16.241s.288-.032.436-.194c.136-.148.132-.427.132-.427s-.02-1.304.587-1.496c.598-.189 1.366 1.26 2.18 1.817.616.422 1.084.33 1.084.33l2.177-.03s1.14-.071.599-.97c-.044-.073-.314-.661-1.617-1.869-1.364-1.263-1.182-1.059.462-3.246.999-1.332 1.398-2.146 1.273-2.494-.12-.332-.856-.244-.856-.244l-2.45.015s-.182-.025-.317.056c-.132.079-.217.263-.217.263s-.39 1.037-.91 1.92c-1.096 1.86-1.534 1.96-1.713 1.842-.417-.272-.313-1.095-.313-1.678 0-1.82.276-2.578-.537-2.774-.27-.065-.468-.108-1.157-.115-.884-.009-1.633.003-2.057.21-.282.138-.5.444-.368.462.164.022.534.1.73.365.253.342.244 1.111.244 1.111s.145 2.14-.34 2.404c-.333.182-.79-.189-1.77-1.886-.502-.87-.88-1.83-.88-1.83s-.073-.178-.203-.274c-.158-.116-.378-.153-.378-.153l-2.327.015s-.35.01-.478.162c-.114.135-.009.413-.009.413s1.837 4.304 3.92 6.472c1.907 1.987 4.072 1.856 4.072 1.856h.982z"/>
-                        </svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.436-.194c.136-.148.132-.427.132-.427s-.02-1.304.587-1.496c.598-.189 1.366 1.26 2.18 1.817.616.422 1.084.33 1.084.33l2.177-.03s1.14-.071.599-.97c-.044-.073-.314-.661-1.617-1.869-1.364-1.263-1.182-1.059.462-3.246.999-1.332 1.398-2.146 1.273-2.494-.12-.332-.856-.244-.856-.244l-2.45.015s-.182-.025-.317.056c-.132.079-.217.263-.217.263s-.39 1.037-.91 1.92c-1.096 1.86-1.534 1.96-1.713 1.842-.417-.272-.313-1.095-.313-1.678 0-1.82.276-2.578-.537-2.774-.27-.065-.468-.108-1.157-.115-.884-.009-1.633.003-2.057.21-.282.138-.5.444-.368.462.164.022.534.1.73.365.253.342.244 1.111.244 1.111s.145 2.14-.34 2.404c-.333.182-.79-.189-1.77-1.886-.502-.87-.88-1.83-.88-1.83s-.073-.178-.203-.274c-.158-.116-.378-.153-.378-.153l-2.327.015s-.35.01-.478.162c-.114.135-.009.413-.009.413s1.837 4.304 3.92 6.472c1.907 1.987 4.072 1.856 4.072 1.856h.982z"/></svg>
                         VK
-                    </a>
-                    <a href="https://wa.me/" class="hero__social-link" target="_blank" rel="noopener">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                        WhatsApp
                     </a>
                 </div>
             </div>
             <div class="hero__image fade-in">
                 <div class="hero__painting">
-                    <img src="hero-painting.jpg" alt="Историческая картина">
+                    <img src="hero-painting.jpg" alt="Историческая картина" width="600" height="450">
                 </div>
             </div>
         </div>
     </section>
-    <!-- ABOUT -->
+
     <section class="about" id="about">
         <div class="container about__inner">
             <div class="about__photo-wrap fade-in">
-                <img src="about-photo.jpg" alt="Гузель" class="about__photo">
+                <img src="about-photo.jpg" alt="Гузель — репетитор по истории" class="about__photo" width="400" height="500">
             </div>
             <div class="about__content fade-in">
                 <h2 class="section-title">Обо мне</h2>
                 <p class="about__intro">
-                    Меня зовут Гузель, я получаю историческое образование в Казанском (Приволжском) Федеральном Университете, обучаюсь на 5 курсе. Готовлю к ЕГЭ и ОГЭ по истории уже два года.
+                    Я учусь на 5 курсе исторического факультета Казанского (Приволжского) федерального университета. Уже два года готовлю школьников к ЕГЭ и ОГЭ по истории — помогаю не просто заучивать даты, а понимать логику событий и уверенно писать задания второй части.
                 </p>
                 <div class="about__stats">
                     <div class="about__stat">
                         <div class="about__stat-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5C4033" stroke-width="1.5">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                                <path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/>
-                            </svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5C4033" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>
                         </div>
                         <div>
-                            <span class="about__stat-value">Казанский (Приволжский) Федеральный Университет</span>
-                            <span class="about__stat-label">5 курс, историческое образование</span>
+                            <span class="about__stat-value">КФУ, исторический факультет</span>
+                            <span class="about__stat-label">5 курс</span>
                         </div>
                     </div>
                     <div class="about__stat">
                         <div class="about__stat-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5C4033" stroke-width="1.5">
-                                <rect x="3" y="4" width="18" height="18" rx="2"/>
-                                <path d="M16 2v4M8 2v4M3 10h18"/>
-                                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/>
-                            </svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5C4033" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                         </div>
                         <div>
                             <span class="about__stat-value">2 года</span>
-                            <span class="about__stat-label">Опыт преподавания</span>
+                            <span class="about__stat-label">опыта преподавания</span>
                         </div>
                     </div>
                     <div class="about__stat">
                         <div class="about__stat-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2">
-                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                            </svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
                         </div>
                         <div>
-                            <span class="about__stat-value">5 учеников сдали ЕГЭ на 90+</span>
-                            <span class="about__stat-label">15 учеников — на 80+</span>
+                            <span class="about__stat-value">5 учеников — 90+</span>
+                            <span class="about__stat-label">15 учеников — 80+ на ЕГЭ</span>
                         </div>
                     </div>
                     <div class="about__stat">
                         <div class="about__stat-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
-                            </svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         </div>
                         <div>
-                            <span class="about__stat-value">Гарантирую успешную сдачу</span>
-                            <span class="about__stat-label">экзамена</span>
+                            <span class="about__stat-value">Индивидуальный подход</span>
+                            <span class="about__stat-label">программа под ваши цели</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- SERVICES -->
+
     <section class="services" id="services">
         <div class="container">
             <h2 class="section-title section-title--center fade-in">Что я предлагаю</h2>
             <div class="services__grid">
                 <div class="service-card fade-in">
-                    <div class="service-card__icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2">
-                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                        </svg>
-                    </div>
-                    <h3>Подготовка к ЕГЭ на 90+</h3>
-                    <p>Эффективная программа подготовки к экзамену на высокий балл. Мои ученики стабильно сдают на 80+ баллов.</p>
+                    <div class="service-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg></div>
+                    <h3>Подготовка к ЕГЭ на 80–90+</h3>
+                    <p>Системная работа по всем разделам: теория, карты, даты, вторая часть. Регулярные пробники и разбор ошибок.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-card__icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2">
-                            <path d="M9 11l3 3L22 4"/>
-                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
-                        </svg>
-                    </div>
+                    <div class="service-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
                     <h3>Подготовка к ОГЭ</h3>
-                    <p>Разберём все темы и закрепим знания. Средняя оценка моих учеников — 4.8 за ОГЭ.</p>
+                    <p>Разбираем все темы школьной программы и учимся уверенно решать задания. Средняя оценка учеников — 4.8.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-card__icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2"/>
-                            <path d="M16 2v4M8 2v4M3 10h18"/>
-                            <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/>
-                        </svg>
-                    </div>
+                    <div class="service-card__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
                     <h3>Ежемесячные пробники</h3>
-                    <p>Регулярное тестирование для отслеживания прогресса и корректировки программы подготовки.</p>
+                    <p>Отслеживаем прогресс, корректируем слабые места и учимся работать в формате реального экзамена.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- RESULTS -->
+
     <section class="results" id="results">
         <div class="container">
-            <h2 class="section-title section-title--center fade-in">Результаты моих учеников</h2>
+            <h2 class="section-title section-title--center fade-in">Результаты учеников</h2>
             <div class="results__grid fade-in">
-                <div class="results__card">
-                    <span class="results__label">Средний балл<br>за ЕГЭ</span>
-                    <span class="results__value">82</span>
+                <div class="results__card"><span class="results__label">Средний балл<br>за ЕГЭ</span><span class="results__value">82</span></div>
+                <div class="results__card"><span class="results__label">Средняя оценка<br>за ОГЭ</span><span class="results__value">4.8</span></div>
+                <div class="results__card"><span class="results__label">Учеников сдали<br>ЕГЭ на 90+</span><span class="results__value">5</span></div>
+                <div class="results__card"><span class="results__label">Учеников сдали<br>ЕГЭ на 80+</span><span class="results__value">15</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title section-title--center fade-in">Стоимость занятий</h2>
+            <div class="pricing__grid">
+                <div class="price-card fade-in">
+                    <div class="price-card__name">Пробное занятие</div>
+                    <div class="price-card__price">0 ₽</div>
+                    <div class="price-card__period">60 минут</div>
+                    <ul class="price-card__list">
+                        <li>Знакомство и диагностика уровня</li>
+                        <li>Разбор сильных и слабых сторон</li>
+                        <li>План подготовки на ближайшие месяцы</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn--dark">Записаться</a>
                 </div>
-                <div class="results__card">
-                    <span class="results__label">Средняя оценка<br>за ОГЭ</span>
-                    <span class="results__value">4.8</span>
+                <div class="price-card price-card--featured fade-in">
+                    <div class="price-card__name">Разовое занятие</div>
+                    <div class="price-card__price">1 600 ₽</div>
+                    <div class="price-card__period">60–90 минут</div>
+                    <ul class="price-card__list">
+                        <li>Индивидуальная программа</li>
+                        <li>Материалы и домашние задания</li>
+                        <li>Обратная связь между занятиями</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn--accent">Записаться</a>
                 </div>
-                <div class="results__card">
-                    <span class="results__label">Учеников сдали<br>ЕГЭ на 90+</span>
-                    <span class="results__value">5</span>
-                </div>
-                <div class="results__card">
-                    <span class="results__label">Учеников сдали<br>ЕГЭ на 80+</span>
-                    <span class="results__value">15</span>
+                <div class="price-card fade-in">
+                    <div class="price-card__name">Пакет 4 занятия</div>
+                    <div class="price-card__price">5 800 ₽</div>
+                    <div class="price-card__period">экономия 600 ₽</div>
+                    <ul class="price-card__list">
+                        <li>Всё из разового занятия</li>
+                        <li>Приоритетная запись</li>
+                        <li>Ежемесячный пробник</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn--dark">Записаться</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- FEATURES -->
+
     <section class="features" id="features">
         <div class="container">
             <h2 class="section-title section-title--center fade-in">Почему выбирают меня</h2>
             <div class="features__grid">
                 <div class="feature-card fade-in">
-                    <div class="feature-card__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2">
-                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-                        </svg>
-                    </div>
+                    <div class="feature-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
                     <div>
-                        <h3>История становится любимым предметом</h3>
-                        <p>Даже для тех, кто не прикасался к истории со средней школы</p>
+                        <h3>История становится понятной</h3>
+                        <p>Объясняю сложные темы простым языком — даже если раньше предмет казался скучным</p>
                     </div>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-card__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 010 7.75"/>
-                        </svg>
-                    </div>
+                    <div class="feature-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
                     <div>
-                        <h3>Особый подход к каждому</h3>
-                        <p>Учитываю уровень подготовки, цели и способности ученика</p>
+                        <h3>Подход под каждого ученика</h3>
+                        <p>Учитываю текущий уровень, цели и темп — программа не шаблонная</p>
                     </div>
                 </div>
                 <div class="feature-card fade-in">
-                    <div class="feature-card__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                    </div>
+                    <div class="feature-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C97B3A" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
                     <div>
-                        <h3>Гарантия результата</h3>
-                        <p>Гарантирую успешную сдачу экзамена при регулярных занятиях</p>
+                        <h3>Фокус на результате</h3>
+                        <p>При регулярных занятиях и выполнении ДЗ большинство учеников стабильно сдают на 80+</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- FORMAT -->
+
     <section class="format">
         <div class="container">
             <h2 class="section-title section-title--center fade-in">Как проходят занятия</h2>
             <div class="format__grid">
                 <div class="format__item fade-in">
-                    <div class="format__item-icon">
-                        <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#5C4033" stroke-width="1.5">
-                            <rect x="4" y="6" width="28" height="20" rx="2"/>
-                            <path d="M4 30H32"/>
-                            <path d="M12 30V26M24 30V26"/>
-                            <circle cx="18" cy="16" r="4"/>
-                        </svg>
-                    </div>
+                    <div class="format__item-icon"><svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#5C4033" stroke-width="1.5"><rect x="4" y="6" width="28" height="20" rx="2"/><path d="M4 30H32"/><path d="M12 30V26M24 30V26"/><circle cx="18" cy="16" r="4"/></svg></div>
                     <p>Онлайн в Zoom<br>с интерактивной доской</p>
                 </div>
                 <div class="format__item fade-in">
-                    <div class="format__item-icon">
-                        <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#5C4033" stroke-width="1.5">
-                            <circle cx="18" cy="10" r="5"/>
-                            <path d="M8 30C8 24 12 20 18 20C24 20 28 24 28 30"/>
-                            <circle cx="28" cy="14" r="3"/>
-                            <path d="M28 17V22"/>
-                        </svg>
-                    </div>
-                    <p>Индивидуальный<br>подход к каждому ученику</p>
+                    <div class="format__item-icon"><svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#5C4033" stroke-width="1.5"><circle cx="18" cy="10" r="5"/><path d="M8 30C8 24 12 20 18 20C24 20 28 24 28 30"/></svg></div>
+                    <p>Индивидуальный<br>подход к каждому</p>
                 </div>
                 <div class="format__item fade-in">
-                    <div class="format__item-icon">
-                        <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#5C4033" stroke-width="1.5">
-                            <path d="M10 28V10C10 8.89543 10.8954 8 12 8H24C25.1046 8 26 8.89543 26 10V28"/>
-                            <path d="M10 28H26"/>
-                            <path d="M14 14H22M14 19H20"/>
-                            <path d="M18 4V8"/>
-                            <path d="M14 6H22"/>
-                        </svg>
-                    </div>
-                    <p>Материалы и задания<br>подбираются под ваши цели</p>
+                    <div class="format__item-icon"><svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#5C4033" stroke-width="1.5"><path d="M10 28V10C10 8.89543 10.8954 8 12 8H24C25.1046 8 26 8.89543 26 10V28"/><path d="M10 28H26"/><path d="M14 14H22M14 19H20"/></svg></div>
+                    <p>Материалы и задания<br>под ваши цели</p>
                 </div>
                 <div class="format__item fade-in">
-                    <div class="format__item-icon">
-                        <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#5C4033" stroke-width="1.5">
-                            <path d="M22 4C26.418 4 30 7.582 30 12C30 16.418 26.418 20 22 20H18L12 26V20C7.582 20 4 16.418 4 12C4 7.582 7.582 4 12 4H22Z"/>
-                        </svg>
-                    </div>
-                    <p>Обратная связь<br>и поддержка между занятиями</p>
+                    <div class="format__item-icon"><svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#5C4033" stroke-width="1.5"><path d="M22 4C26.418 4 30 7.582 30 12C30 16.418 26.418 20 22 20H18L12 26V20C7.582 20 4 16.418 4 12C4 7.582 7.582 4 12 4H22Z"/></svg></div>
+                    <p>Поддержка<br>между занятиями</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- CTA -->
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title section-title--center fade-in">Частые вопросы</h2>
+            <div class="faq__list fade-in">
+                <div class="faq__item">
+                    <button class="faq__question">Сколько длится одно занятие?<span class="faq__icon"></span></button>
+                    <div class="faq__answer"><div class="faq__answer-inner">Обычно 60–90 минут. Длительность подбираем под задачи и возраст ученика. Пробное занятие — 60 минут.</div></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question">В каком формате проходят занятия?<span class="faq__icon"></span></button>
+                    <div class="faq__answer"><div class="faq__answer-inner">Онлайн в Zoom с интерактивной доской. Нужен только компьютер или планшет с камерой и стабильный интернет.</div></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question">С какого уровня можно начинать?<span class="faq__icon"></span></button>
+                    <div class="faq__answer"><div class="faq__answer-inner">С любого. На первом занятии определяем текущий уровень и составляем план. Работаю и с теми, кто только начинает готовиться, и с теми, кому нужно подтянуть конкретные темы.</div></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question">Как часто нужно заниматься?<span class="faq__icon"></span></button>
+                    <div class="faq__answer"><div class="faq__answer-inner">Оптимально 1–2 раза в неделю. Частота зависит от стартового уровня и того, сколько времени осталось до экзамена. Обсудим на пробном занятии.</div></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question">Нужно ли что-то готовить к пробному занятию?<span class="faq__icon"></span></button>
+                    <div class="faq__answer"><div class="faq__answer-inner">Ничего специального. Будет полезно, если расскажете о своих целях (ОГЭ / ЕГЭ, желаемый балл) и покажете результаты прошлых пробников, если они есть.</div></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__question">Можно ли перенести или отменить занятие?<span class="faq__icon"></span></button>
+                    <div class="faq__answer"><div class="faq__answer-inner">Да. Прошу предупреждать минимум за 12 часов — тогда занятие можно перенести без оплаты. При более поздней отмене занятие считается проведённым.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="cta" id="contacts">
         <div class="container cta__inner fade-in">
             <h2 class="cta__title">Запишитесь на бесплатное пробное занятие</h2>
-            <p class="cta__text">
-                Чтобы понять свой уровень, получить план подготовки и личные рекомендации 💯
-            </p>
-            <a href="https://t.me/" class="btn btn--dark btn--large" target="_blank" rel="noopener">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="4" width="18" height="18" rx="2"/>
-                    <path d="M16 2v4M8 2v4M3 10h18"/>
-                    <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/>
-                </svg>
-                Записаться сейчас
-            </a>
+            <p class="cta__text">Разберём ваш уровень, составим план подготовки и ответим на все вопросы</p>
+            <div class="cta__form-wrap">
+                <!-- ЗАГЛУШКА ЯНДЕКС.ФОРМЫ
+                Замените этот блок на iframe вашей формы:
+
+                <iframe src="https://forms.yandex.ru/u/ВАШ_ID/"
+                        frameborder="0"
+                        name="ya-form-ВАШ_ID"
+                        width="100%"
+                        height="480"
+                        style="border-radius: 12px;">
+                </iframe>
+                -->
+                <div class="cta__form-placeholder">
+                    <strong>Здесь будет Яндекс.Форма</strong>
+                    Создайте форму на forms.yandex.ru<br>
+                    и вставьте iframe-код вместо этой заглушки
+                </div>
+            </div>
         </div>
     </section>
-    <!-- FOOTER -->
+
     <footer class="footer">
         <div class="container">
             <p>© 2026 Гузель. Репетитор по истории. Подготовка к ЕГЭ и ОГЭ.</p>
         </div>
     </footer>
+
     <script>
-        // Мобильное меню
         const burger = document.querySelector('.header__burger');
         const mobileNav = document.getElementById('mobileNav');
         const mobileLinks = mobileNav.querySelectorAll('a');
@@ -1088,7 +591,6 @@
                 document.body.style.overflow = '';
             });
         });
-        // Плавная прокрутка
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
@@ -1100,7 +602,21 @@
                 }
             });
         });
-        // Анимация появления при скролле
+        document.querySelectorAll('.faq__question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const answer = item.querySelector('.faq__answer');
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq__item').forEach(el => {
+                    el.classList.remove('active');
+                    el.querySelector('.faq__answer').style.maxHeight = null;
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
         const fadeElements = document.querySelectorAll('.fade-in');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1109,10 +625,7 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
         fadeElements.forEach(el => observer.observe(el));
     </script>
 </body>
