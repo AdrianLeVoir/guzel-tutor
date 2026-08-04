@@ -1,1 +1,1 @@
-# guzel-tutor.github.io
+# guzel-tutor.levoirlab.su
