@@ -196,12 +196,19 @@
         .cta__title { font-family: var(--font-heading); font-size: clamp(28px, 3.5vw, 40px); font-weight: 600; margin-bottom: 16px; line-height: 1.3; color: var(--white); }
         .cta__text { font-size: 17px; color: rgba(255, 255, 255, 0.9); margin-bottom: 32px; line-height: 1.6; }
         .cta__form-wrap {
-            background: var(--white); border-radius: var(--radius); padding: 8px;
-            max-width: 520px; margin: 0 auto; min-height: 420px;
-            display: flex; align-items: center; justify-content: center;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 12px;
+            max-width: 560px;
+            margin: 0 auto;
+            overflow: hidden;
         }
-        .cta__form-placeholder { color: var(--text-light); font-size: 15px; text-align: center; padding: 40px 24px; line-height: 1.6; }
-        .cta__form-placeholder strong { display: block; color: var(--text); font-size: 16px; margin-bottom: 8px; }
+        .cta__form-wrap iframe {
+            width: 100% !important;
+            max-width: 100%;
+            border: none;
+            display: block;
+        }
         .footer { padding: 36px 0; text-align: center; font-size: 13px; color: var(--text-light); border-top: 1px solid var(--border); }
         .mobile-nav {
             display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
@@ -549,22 +556,14 @@
             <h2 class="cta__title">Запишитесь на бесплатное пробное занятие</h2>
             <p class="cta__text">Разберём ваш уровень, составим план подготовки и ответим на все вопросы</p>
             <div class="cta__form-wrap">
-                <!-- ЗАГЛУШКА ЯНДЕКС.ФОРМЫ
-                Замените этот блок на iframe вашей формы:
-
-                <iframe src="https://forms.yandex.ru/u/ВАШ_ID/"
+                <script src="https://forms.yandex.ru/_static/embed.js"></script>
+                <iframe src="https://forms.yandex.ru/u/6a7196d6e010db002917c921?iframe=1"
                         frameborder="0"
-                        name="ya-form-ВАШ_ID"
+                        name="ya-form-6a7196d6e010db002917c921"
                         width="100%"
-                        height="480"
-                        style="border-radius: 12px;">
+                        height="520"
+                        style="border-radius: 12px; max-width: 100%; display: block;">
                 </iframe>
-                -->
-                <div class="cta__form-placeholder">
-                    <strong>Здесь будет Яндекс.Форма</strong>
-                    Создайте форму на forms.yandex.ru<br>
-                    и вставьте iframe-код вместо этой заглушки
-                </div>
             </div>
         </div>
     </section>
